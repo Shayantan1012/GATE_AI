@@ -6,17 +6,24 @@ from fastapi import HTTPException, status
 
 async def register_user(data):
     db = get_db()
-    existing = await db.users.find_one({"email": data.email})
-    if existing:
+
+    # Check existing user
+    if await db.users.find_one({"email": data.email}):
         raise HTTPException(status_code=400, detail="User already exists")
 
     user = user_model({
+        "name": data.name,
+        "college": data.college,
+        "age": data.age,
+        "exam": data.exam,
+        "branch": data.branch,
         "email": data.email,
+        "phone": data.phone,
         "hashed_password": hash_password(data.password),
-        "role": "user"
     })
 
     await db.users.insert_one(user)
+
     return {"message": "User registered successfully"}
 
 
