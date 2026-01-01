@@ -1,0 +1,60 @@
+# -----------------------------
+# Core Backend
+# -----------------------------
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+
+# -----------------------------
+# Authentication & Security
+# -----------------------------
+python-jose[cryptography]
+passlib[bcrypt]
+
+# -----------------------------
+# LangChain & LLM
+# -----------------------------
+langchain
+langchain-community
+langchain-core
+
+# Embeddings (choose one or more)
+sentence-transformers
+transformers
+torch
+
+# -----------------------------
+# Vector Databases
+# -----------------------------
+faiss-cpu
+chromadb
+
+# -----------------------------
+# Document Loaders
+# -----------------------------
+pypdf
+python-docx
+unstructured
+
+# -----------------------------
+# Database
+# -----------------------------
+
+psycopg2-binary
+pymongo
+pymongo[srv]
+
+# -----------------------------
+# Utilities
+# -----------------------------
+python-dotenv
+tqdm
+httpx
+loguru
+
+# -----------------------------
+# Background Tasks / Async
+# -----------------------------
+celery
+redis
