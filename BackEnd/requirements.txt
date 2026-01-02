@@ -18,17 +18,7 @@ passlib[bcrypt]
 langchain
 langchain-community
 langchain-core
-
-# Embeddings (choose one or more)
-sentence-transformers
-transformers
-torch
-
-# -----------------------------
-# Vector Databases
-# -----------------------------
-faiss-cpu
-chromadb
+langchain-chroma
 
 # -----------------------------
 # Document Loaders
@@ -52,9 +42,3 @@ python-dotenv
 tqdm
 httpx
 loguru
-
-# -----------------------------
-# Background Tasks / Async
-# -----------------------------
-celery
-redis
